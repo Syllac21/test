@@ -1,16 +1,21 @@
 <?php session_start();?>
 <!DOCTYPE html>
 <html>
+    
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>site de recette - ajout de recette</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Shadows+Into+Light&display=swap" rel="stylesheet"> 
     </head>
 
     <body class="d-flex flex-column min-vh-100">
-        <div>
+        <div class="container">
             <?php require_once(__DIR__ . '/header.php'); ?>
             <h1>Nouvelle recette</h1>
             <form action="submit_new_recipe.php" method="POST" enctype="multipart/form-data">

@@ -18,6 +18,10 @@ require_once(__DIR__ . '/functions.php');
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
             rel="stylesheet"
     >
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Shadows+Into+Light&display=swap" rel="stylesheet"> 
 </head>
 <body class="d-flex flex-column min-vh-100">
     <div class="container">
@@ -35,8 +39,8 @@ require_once(__DIR__ . '/functions.php');
                     <i><?php echo displayAuthor($recipe['author'], $users); ?></i>
                     <?php if (isset($_SESSION['LOGGED_USER']) && $recipe['author'] === $_SESSION['LOGGED_USER']['email']) : ?>
                         <ul class="list-group list-group-horizontal">
-                            <li class="list-group-item"><a class="link-warning" href="recipes_update.php?id=<?php echo($recipe['recipe_id']); ?>">Editer l'article</a></li>
-                            <li class="list-group-item"><a class="link-danger" href="recipes_delete.php?id=<?php echo($recipe['recipe_id']); ?>">Supprimer l'article</a></li>
+                            <li class="list-group-item"><a class="bouton-editer" href="recipes_update.php?id=<?php echo($recipe['recipe_id']); ?>">Editer l'article</a></li>
+                            <li class="list-group-item"><a class="bouton-supprimer" href="recipes_delete.php?id=<?php echo($recipe['recipe_id']); ?>">Supprimer l'article</a></li>
                         </ul>
                     <?php endif; ?>
                 </article>

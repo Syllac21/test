@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(204, 185, 175);
+    font-family: 'Shadows Into Light', cursive;
+}
+div{
+    background-color: rgb(204, 185, 175);
+}
+
+input{
+    background-color: rgb(204, 185, 175);
+}
+
+nav{
+    background-color: rgb(204, 185, 175);
+}
+a{
+    color: brown;
+}
+.bouton-editer{
+    color: rgb(143, 127, 92);
+    
+}
+.bouton-supprimer{
+    color: rgb(182, 112, 112);
+}
+.list-group-item{
+    background-color: rgb(114, 83, 83);
+    margin-right: 10px;
+}
+
