@@ -28,3 +28,4 @@ $insertRecipe->execute([
     'author'=>$_SESSION['LOGGED_USER']['email'],
     'is_enabled'=>1,
 ]);
+redirectToUrl('index.php');
