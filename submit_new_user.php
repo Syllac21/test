@@ -26,15 +26,15 @@ if(
 $email=trim(strip_tags($postData['email']));
 $full_name=trim(strip_tags($postData['full_name']));
 $age=trim(strip_tags($postData['age']));
-$password=trim(strip_tags($postData['password']));
+$password_crypt=password_hash(trim(strip_tags($postData['password'])),PASSWORD_DEFAULT);
 
 $insertUser=$mysqlClient->prepare('INSERT INTO users(email, full_name, age, password) VALUES (:email, :full_name, :age, :password)'); 
 $insertUser->execute([
     'email'=>$email,
     'full_name'=>$full_name,
     'age'=>$age,
-    'password'=>$password,
+    'password'=>$password_crypt,
 ]);
 
-redirectToUrl('login.php');
+redirectToUrl('index.php');
 ?>

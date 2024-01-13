@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 session_start();
 require_once(__DIR__ . '/config/mysql.php');
@@ -20,7 +20,7 @@ if (isset($postData['email']) &&  isset($postData['password'])) {
         foreach ($users as $user) {
             if (
                 $user['email'] === $postData['email'] &&
-                $user['password'] === $postData['password']
+                password_verify($postData['password'],$user['password'])
             ) {
                 $_SESSION['LOGGED_USER'] = [
                     'email' => $user['email'],
